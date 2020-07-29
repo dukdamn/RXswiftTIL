@@ -1,13 +1,12 @@
 
 
 import UIKit
-import RxSwift
 
 /*:
  # Observables
  */
 
-
+123
 let beg = DisposeBag()
 // #1
 Observable<Int>.create { (observer) -> Disposable in
