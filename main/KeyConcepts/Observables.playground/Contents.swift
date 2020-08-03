@@ -1,10 +1,11 @@
 
 
 import UIKit
-
+import RxSwift
 /*:
  # Observables
  */
+
 
 let beg = DisposeBag()
 // #1
