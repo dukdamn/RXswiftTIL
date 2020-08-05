@@ -6,7 +6,7 @@ import RxSwift
  # Observables
  */
 
-1234
+
 let beg = DisposeBag()
 // #1
 Observable<Int>.create { (observer) -> Disposable in
