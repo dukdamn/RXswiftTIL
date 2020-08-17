@@ -20,7 +20,8 @@ Observable<Int>.create { (observer) -> Disposable in
 
 // #2
 Observable.from([0,1])
-123
+
+
 
 Observable<Int>.of(1,2,3,4)
   .subscribe { (check) in
