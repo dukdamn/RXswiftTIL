@@ -28,6 +28,26 @@ import RxCocoa
  # Relay
  */
 
+// next 이벤트만 전달한다
+// disposed 되기전까지 중단되지 않는다
 let bag = DisposeBag()
 
+let preplay = PublishRelay<Int>()
 
+
+preplay.subscribe{
+  print("111 : ",$0)
+}.disposed(by: bag)
+
+preplay.accept(1)
+
+let breplay = BehaviorRelay<Int>(value: 1)
+breplay.accept(2)
+breplay.subscribe{
+  print("222 : ",$0)
+}.disposed(by: bag)
+
+breplay.accept(3)
+breplay.subscribe{
+  print("333 : ",$0)
+}.disposed(by: bag)

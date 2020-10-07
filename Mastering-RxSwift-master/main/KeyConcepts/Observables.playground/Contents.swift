@@ -27,16 +27,37 @@ import RxSwift
  # Observables
  */
 
+// Observables 은 event 만 전달
+// Observer은 구독자로 Observables을 바라본다
+// Observab;es는 onnext, error, completed 를 Emission 한다 Notification
+
+// #1
+// a 는 observer가 저장되있다
+let a = Observable<Int>.create { (observer) -> Disposable in
+  observer.onNext(4)
+  
+  observer.onCompleted()
+  
+  return Disposables.create()
+}
+.take(1)
+
+a.subscribe {
+  print("==start==")
+  print($0)
+  if let elem = $0.element {
+    print(elem)
+  }
+  print("==end==")
+}.dispose()
+print("------")
+a.subscribe(onNext: { elem in
+  print(elem)
+  
+})
 
 
+print("duck")
 
-
-
-
-
-
-
-
-
-
+// #2
 

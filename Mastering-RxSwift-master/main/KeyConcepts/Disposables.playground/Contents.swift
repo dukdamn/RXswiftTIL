@@ -28,11 +28,39 @@ import RxSwift
  */
 
 
+let subscription1 = Observable.from([1,2,3]).subscribe { (elem) in
+  print("Next", elem)
+} onError: { (error) in
+  print("error", error)
+} onCompleted: {
+  print("onCompleted")
+} onDisposed: {
+  print("onDisposed")
+}
+subscription1.dispose()
 
+var bag = DisposeBag()
+// diposed 는 옵저버가 보내는 신호가 아니다
+Observable.from([1,2,3]).subscribe {
+  print($0)
+}.disposed(by: bag)
 
+//
+bag = DisposeBag()
 
-
-
+let subscription2 = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance).subscribe { (elem) in
+  print("Next", elem)
+} onError: { (error) in
+  print("error", error)
+} onCompleted: {
+  print("onCompleted")
+} onDisposed: {
+  print("onDisposed")
+}
+// take ontill 로 특정시점까지 해지할수 있다
+DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+  subscription2.dispose()
+}
 
 
 

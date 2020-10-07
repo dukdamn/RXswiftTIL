@@ -28,9 +28,23 @@ import RxCocoa
  # AsyncSubject
  */
 
+// 서브젝트 컴플리트 이벤트전에 어떤 이벤트도 전달되지 않는다.
 let bag = DisposeBag()
 
 enum MyError: Error {
    case error
 }
 
+let subject = AsyncSubject<Int>()
+
+subject.subscribe {
+  print($0)
+}.disposed(by: bag)
+
+subject.onNext(0)
+subject.onNext(1)
+subject.onNext(2)
+subject.onNext(3)
+//subject.onCompleted()
+// next이벤트가 전달되지 않느다
+subject.onError(MyError.error)
