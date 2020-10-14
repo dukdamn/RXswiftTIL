@@ -13,8 +13,8 @@ class RxSwiftViewController: UIViewController {
     // MARK: - Field
 
   var label = UILabel()
-    var counter: Int = 0
-
+    var counter: Int = 123123
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
