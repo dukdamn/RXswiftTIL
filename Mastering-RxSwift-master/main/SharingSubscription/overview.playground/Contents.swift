@@ -45,7 +45,7 @@ let source = Observable<String>.create { observer in
    }
 }
 .debug()
-
+.share()
 
 source.subscribe().disposed(by: bag)
 source.subscribe().disposed(by: bag)

@@ -32,3 +32,9 @@ let fruits = Observable.from(["🍏", "🍎", "🥝", "🍑", "🍋", "🍉"])
 let animals = Observable.from(["🐶", "🐱", "🐹", "🐼", "🐯", "🐵"])
 
 
+let duck = [1,2,3,4,5]
+Observable.just(duck)
+  .subscribe {
+    print($0)
+  }
+print("test")
