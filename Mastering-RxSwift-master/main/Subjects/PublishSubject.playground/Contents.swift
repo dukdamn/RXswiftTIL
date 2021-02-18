@@ -41,6 +41,8 @@ let subject = PublishSubject<String>()
 // 아직 옵저버에 구독하지 않음
 subject.onNext("Hello")
 
+
+
 // 새로운 옵저보 구독
 // 구독이후에 이벤트만 전달
 let d1 = subject.subscribe {
