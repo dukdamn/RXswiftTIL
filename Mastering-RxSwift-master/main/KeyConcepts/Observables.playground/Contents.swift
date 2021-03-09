@@ -58,11 +58,6 @@ a.subscribe(onNext: { elem in
 
 
 
-
-
-
-
-
 print("duck")
 
 // #2
