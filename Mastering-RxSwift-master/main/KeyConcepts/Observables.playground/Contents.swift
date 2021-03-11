@@ -55,9 +55,6 @@ a.subscribe(onNext: { elem in
   print(elem)
   
 })
-
-
-
 print("duck")
 
 // #2
