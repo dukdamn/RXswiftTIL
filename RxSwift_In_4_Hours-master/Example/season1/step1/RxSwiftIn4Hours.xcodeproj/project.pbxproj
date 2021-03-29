@@ -368,7 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VR4RJ5PZHH;
+				DEVELOPMENT_TEAM = 77YZ9248DM;
 				INFOPLIST_FILE = RxSwiftIn4Hours/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,7 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VR4RJ5PZHH;
+				DEVELOPMENT_TEAM = 77YZ9248DM;
 				INFOPLIST_FILE = RxSwiftIn4Hours/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

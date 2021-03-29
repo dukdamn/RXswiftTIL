@@ -12,9 +12,8 @@ import UIKit
 class RxSwiftViewController: UIViewController {
     // MARK: - Field
 
-  var label = UILabel()
-    var counter: Int = 123123
-  
+    var counter: Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
@@ -29,11 +28,11 @@ class RxSwiftViewController: UIViewController {
     @IBOutlet var countLabel: UILabel!
 
     // MARK: - IBAction
-  var disposible: Disposable?
+
     @IBAction func onLoadImage(_ sender: Any) {
         imageView.image = nil
 
-      disposible = rxswiftLoadImage(from: LARGER_IMAGE_URL)
+        _ = rxswiftLoadImage(from: LARGER_IMAGE_URL)
             .observeOn(MainScheduler.instance)
             .subscribe({ result in
                 switch result {
@@ -51,7 +50,6 @@ class RxSwiftViewController: UIViewController {
 
     @IBAction func onCancel(_ sender: Any) {
         // TODO: cancel image loading
-      disposible?.dispose()
     }
 
     // MARK: - RxSwift
