@@ -15,6 +15,8 @@ import UIKit
 
 let MEMBER_LIST_URL = "https://my.api.mockaroo.com/members_with_avatar.json?key=44ce18f0"
 // Observable
+
+
 class 나중에생기는데이터<T> {
   private let task: (@escaping (T) -> Void) -> Void
   
