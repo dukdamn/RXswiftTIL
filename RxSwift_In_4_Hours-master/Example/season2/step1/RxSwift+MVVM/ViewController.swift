@@ -10,6 +10,8 @@ import RxSwift
 import SwiftyJSON
 import UIKit
 
+
+
 // 비동기적으로 생선된 데이터를 리턴값으로 전달 하는거다
 // 그 값을 사용할 떄는 나중에 오면 그 메서드를 호출하면 된다
 
