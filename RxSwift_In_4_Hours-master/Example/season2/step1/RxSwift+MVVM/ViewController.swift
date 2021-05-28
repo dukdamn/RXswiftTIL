@@ -29,8 +29,6 @@ class 나중에생기는데이터<T> {
     task(f)
   }
 }
-
-
 class ViewController: UIViewController {
   @IBOutlet var timerLabel: UILabel!
   @IBOutlet var editView: UITextView!
